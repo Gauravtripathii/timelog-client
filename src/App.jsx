@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Registeration from './Components/registeration' 
 const App = () => {
   return (
-    <div>App</div>
-  )
+    <div>
+      <Registeration />
+    </div>
+  );
 }
 
 export default App
