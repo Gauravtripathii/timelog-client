@@ -1,63 +1,84 @@
-import React from 'react';
-import Authpic from '/src/assets/Images/authpic.jpeg'
-const RegistrationForm = () => {
+import React, { useState } from 'react';
+
+const AuthPage = () => {
+  const [isSignUp, setIsSignUp] = useState(false);
+
+  const toggleMode = () => setIsSignUp(!isSignUp);
+
   return (
-    <div className="flex justify-center items-center h-screen w-screen">
-      <div className="flex flex-col md:flex-row">
-        <form className="bg-white p-6 rounded-lg shadow-md md:w-1/2">
-          <h2 className="text-2xl font-bold text-center mb-4">Registration</h2>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
+    <div className="flex h-screen bg-gray-100">
+      <div className="m-auto bg-white shadow-lg overflow-hidden flex h-screen w-screen">
+        <div className="w-1/2 bg-indigo-900 p-12 text-white transform  origin-top-right -skew-x-12 h-screen">
+          <div className="">
+            <div className="flex items-center mb-8">
+              <svg className="h-8 w-8 text-purple-400 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <h2 className="text-2xl font-bold ">TimeLog</h2>
+            </div>
+            <h1 className="text-4xl font-bold mb-4 skew-x-12">Add an upcoming event<br />Or Make Time Capsule</h1>
+           <span className='skew-y-9'>
+           <p className="mb-8 text-sm w-2/3 ml-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perferendis molestias tempore modi ipsa, fugit assumenda dolore sit vel debitis!.</p>
+           </span>
+            <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded left-8">
+              LEARN MORE
+            </button>
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
+        </div>
+        <div className="w-1/2 p-12">
+          <h2 className="text-3xl font-bold mb-8">{isSignUp ? 'Sign up to join' : 'Sign in to continue'}</h2>
+          <form>
+            {isSignUp && (
+              <div className="mb-4">
+                <input className="w-full p-2 border rounded" type="email" placeholder="Email" />
+              </div>
+            )}
+            <div className="mb-4">
+              <input className="w-full p-2 border rounded" type="text" placeholder="Username" />
+            </div>
+            <div className="mb-4">
+              <input className="w-full p-2 border rounded" type="password" placeholder="Password" />
+            </div>
+            {isSignUp && (
+              <div className="mb-4">
+                <input className="w-full p-2 border rounded" type="password" placeholder="Confirm Password" />
+              </div>
+            )}
+            {!isSignUp && (
+              <div className="flex items-center justify-between mb-4">
+                <label className="flex items-center">
+                  <input type="checkbox" className="mr-2" />
+                  <span>Remember Me</span>
+                </label>
+                <a href="#" className="text-purple-500 hover:text-purple-600">forgot password?</a>
+              </div>
+            )}
+            <button className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+              {isSignUp ? 'SIGN UP' : 'LOGIN'}
+            </button>
+          </form>
+          <div className="mt-6 text-center">
+            {isSignUp ? (
+              <p>Already have an account? <button onClick={toggleMode} className="text-purple-500 hover:text-purple-600 font-semibold">Sign in</button></p>
+            ) : (
+              <p>Don't have an account? <button onClick={toggleMode} className="text-purple-500 hover:text-purple-600 font-semibold">Sign up</button></p>
+            )}
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
-              Password
-            </label>
-            <input
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          <button
-            className="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
-            type="submit"
-          >
-            Register
-          </button>
-        </form>
-        <div className="md:ml-4">
-          <img src={Authpic} alt="authpic" className="w-full h-auto md:max-h-screen" />
+          {!isSignUp && (
+            <div className="mt-8">
+              <p className="text-center mb-2">or login with</p>
+              <div className="flex justify-center space-x-4">
+                <button className="bg-blue-600  hover:bg-blue-500 text-white font-bold py-2 px-4 rounded w-1/3">
+                  Google
+                </button>
+                
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default AuthPage;
