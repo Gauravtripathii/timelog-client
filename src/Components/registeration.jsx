@@ -8,21 +8,46 @@ const AuthPage = () => {
   return (
     <div className="flex h-screen bg-gray-100 ">
       <div className="m-auto bg-white shadow-lg overflow-hidden flex h-screen w-screen">
-        <div className="w-1/2 bg-[#22243d] p-12 text-white transform  origin-top-right -skew-x-[20deg] h-screen">
-          <div className="">
-            <div className="flex items-center mb-8">
-              <svg className="h-8 w-8 text-purple-400 mr-2 skew-x-[20deg]" viewBox="0 0 24 24" fill="currentColor">
+        <div className="w-1/2 bg-[#22243d] text-white transform  origin-top-right -skew-x-[20deg] h-screen relative">
+          <div className="skew-x-[20deg] flex flex-col justify-between h-full absolute left-1/4 top-0 py-32">
+            <div className="flex items-center gap-5">
+              <svg className="h-20 w-20 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <h2 className="text-2xl font-bold skew-x-[20deg]">TimeLog</h2>
+              <h2 className="text-5xl font-bold">TimeLog</h2>
             </div>
-            <h1 className="text-4xl font-bold mb-4 skew-x-[20deg] ml-[10%] mt-[25%]">Add an upcoming event/<br />Make a Time Capsule</h1>
-           <p className="mb-8 text-sm w-2/3 ml-[18%] skew-x-[20deg] mt-[8%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perferendis molestias tempore modi ipsa, fugit assumenda dolore sit vel debitis!.</p>
-            <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded left-8 skew-x-[20deg] ml-[26%] mt-[6%] ">
+            <h1 className="text-5xl font-bold">Add an upcoming event/<br />Make a Time Capsule</h1>
+           <p className="text-xl w-2/3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perferendis molestias tempore modi ipsa, fugit assumenda dolore sit vel debitis!.</p>
+            <button className="w-fit bg-purple-500 hover:bg-purple-600 text-xl text-white font-bold py-3 px-5 rounded-2xl">
               LEARN MORE
             </button>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="w-1/2 p-12">
           <h2 className="text-3xl font-bold mb-8 flex justify-between mt-[12rem]">{isSignUp ? 'Sign up to join' : 'Sign in to continue'}</h2>
           <form>
