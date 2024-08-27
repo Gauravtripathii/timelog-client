@@ -10,9 +10,9 @@ const AuthPage = () => {
   return (
     <div className="flex h-screen bg-gray-100 ">
       <div className="bg-white shadow-lg overflow-hidden flex flex-col h-screen w-screen relative">
-        <div className="w-full h-1/2 bg-[#22243d] text-white -skew-y-[15deg] -translate-y-[40%] shadow-xl">
+        <div className="w-full h-1/2 sm:h-[60%] bg-[#22243d] text-white -skew-y-[15deg] -translate-y-[40%] shadow-xl">
           <div className="flex flex-col items-center justify-between gap-7 h-[60%] w-full absolute top-[25%] pt-20 skew-y-[15deg]">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:pt-12">
               <svg
                 className="h-8 w-8 text-purple-400"
                 viewBox="0 0 24 24"
@@ -22,7 +22,7 @@ const AuthPage = () => {
               </svg>
               <h2 className="text-2xl font-bold uppercase">TimeLog</h2>
             </div>
-            <h1 className="text-[6.5vw]  font-bold uppercase text-center">
+            <h1 className="text-[6.5vw] md:text-[5.7vw]  font-bold uppercase text-center">
               Add an upcoming event/
               <br />
               Make a Time Capsule
@@ -39,7 +39,7 @@ const AuthPage = () => {
             </button>
           </div>
           {/* clock icon from top */}
-          <div className="absolute skew-y-[15deg] w-[25vw] h-[25vw] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 border border-purple-500 rounded-full flex items-center justify-center">
+          <div className="absolute skew-y-[15deg] w-[25vw] h-[25vw] md:w-[17vw] md:h-[17vw] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 border border-purple-500 rounded-full flex items-center justify-center">
             <div className="w-3/4 h-3/4 p-2 bg-gradient-to-r from-[#a269fe] to-purple-400 rounded-full flex items-center justify-center">
               <img src={clock_img} alt="clock icon" className="w-[90%] h-[90%]" />
             </div>
@@ -70,11 +70,11 @@ const AuthPage = () => {
 
 
 
-        <div className="w-full h-4/6 flex flex-col items-center justify-center gap-5 absolute bottom-0 pt-10">
-          <h2 className="text-3xl font-semibold">
+        <div className="w-full h-4/6 flex flex-col items-center justify-center gap-5 absolute bottom-0 pt-10 ">
+          <h2 className="text-3xl font-semibold md:text-4xl">
             {isSignUp ? "Sign up to join" : "Sign in to continue"}
           </h2>
-          <form className="flex flex-col gap-3">
+          <form className="flex flex-col gap-3 md:w-96 ">
             {isSignUp && (
               <div className="">
                 <input
