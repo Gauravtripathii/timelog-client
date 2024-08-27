@@ -53,7 +53,7 @@ const AuthPage = () => {
             {isSignUp && (
               <div>
                 <input
-                  className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-2xl xl:px-7 xl:py-5"
+                  className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-xl 2xl:text-2xl 2xl:px-7 2xl:py-5"
                   type="email"
                   placeholder="Email"
                 />
@@ -61,14 +61,14 @@ const AuthPage = () => {
             )}
             <div>
               <input
-                className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-2xl xl:px-7 xl:py-5"
+                className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-xl 2xl:text-2xl 2xl:px-7 2xl:py-5"
                 type="text"
                 placeholder="Username"
               />
             </div>
             <div>
               <input
-                className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-2xl xl:px-7 xl:py-5"
+                className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-xl 2xl:text-2xl 2xl:px-7 2xl:py-5"
                 type="password"
                 placeholder="Password"
               />
@@ -76,7 +76,7 @@ const AuthPage = () => {
             {isSignUp && (
               <div>
                 <input
-                  className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-2xl xl:px-7 xl:py-5"
+                  className="w-full px-5 py-3 border rounded-full outline-purple-500 xl:text-xl 2xl:text-2xl 2xl:px-7 2xl:py-5"
                   type="password"
                   placeholder="Confirm Password"
                 />
@@ -96,7 +96,7 @@ const AuthPage = () => {
                 </a>
               </div>
             )}
-            <button className="w-full bg-gradient-to-r from-[#a269fe] to-purple-400 hover:bg-purple-600 text-white font-bold px-5 py-3 rounded-full xl:text-2xl xl:px-7 xl:py-5">
+            <button className="w-full bg-gradient-to-r from-[#a269fe] to-purple-400 hover:bg-purple-600 text-white font-bold px-5 py-3 rounded-full xl:text-xl 2xl:text-2xl 2xl:px-7 2xl:py-5">
               {isSignUp ? "SIGN UP" : "LOGIN"}
             </button>
           </form>
