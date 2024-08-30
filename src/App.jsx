@@ -4,8 +4,8 @@ import Home from './Components/Home';
 const App = () => {
   return (
     <div className='overflow-x-hidden'>
-      <Registeration />
-      {/* <Home /> */}
+      {/* <Registeration /> */}
+      <Home />
     </div>
   );
 }
