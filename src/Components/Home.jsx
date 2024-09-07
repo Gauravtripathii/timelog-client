@@ -1,6 +1,15 @@
 import React from "react";
-import projectimg from "../assets/Images/Hero.png";
+import projectimg from "../assets/Images/Hero.gif";
 import { useState, useRef, useEffect } from "react";
+
+import Calendar from "../assets/Images/calendar.gif";
+import Email from "../assets/Images/email.gif";
+import Ai from "../assets/Images/ai.gif";
+import quoatation_up from "../assets/Images/quotation-Upper.png"
+import quoatation_low from "../assets/Images/quotation-Lower.png"
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
   const [isNav, setIsNav] = useState(false);
@@ -17,6 +26,26 @@ const Home = () => {
       CloseRef.current.style.fontSize = "2.25rem";
     }
   }, [isNav]);
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <div className="h-full">
       <div className=" h-screen w-full top-0 text p-4 ">
@@ -56,16 +85,72 @@ const Home = () => {
           </nav>
         </header>
 
-        <div className="h-full flex flex-col items-center justify-center px-4">
-         
-          <div className="text-2xl text-white ">
+        <div className="h-full flex flex-col items-center justify-center px-4 gap-16">
+          <div className="text-4xl text-purple-700 backdrop-blur-sm font-bold">
             Automated mail made easy <span className="text-3xl">/</span>
-            <span className="text-purple-600">make the time capsule</span>
+            <span className="text-white">make the time capsule</span>
+          </div>
+
+          <div className="text-white">
+            <img src={quoatation_up} className="w-6 h-6 inline mr-1 -mt-3"/>
+          <span className="text-purple-600 font-bold">Unleash</span> the power of smart emails-because your messages should work as hard as you do!
+          <img src={quoatation_low} className="w-6 h-6 inline ml-1 -mb-2"/>
+          </div>
+
+
+          <div className="w-full ">
+            <Carousel className=""
+              responsive={responsive}
+              showDots={true}
+              swipeable={true}
+              draggable={true}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={4500}
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              renderDotsOutside={true}
+            >
+              <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
+                <img src={Email} className="h-32 rounded-xl" />
+                <div>
+                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                    Mail automation
+                  </p>
+                  <span className="text-white italic font-normal">
+                    Our email automation is like a personal assistant who never
+                    needs coffee breaks.
+                  </span>
+                </div>
+              </div>
+              <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
+                <img src={Ai} className="h-32 rounded-xl" />
+                <div>
+                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                    Gen AI
+                  </p>
+                  <span className="text-white italic font-normal">
+                    Automate Your Mails Through Gen AI
+                  </span>
+                </div>
+              </div>
+              <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
+                <img src={Calendar} className="h-32 rounded-xl" />
+                <div>
+                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                    Time Capsule
+                  </p>
+                  <span className="text-white italic font-normal">
+                    Travel through time tomorrow with our built-in digital time
+                    capsule!
+                  </span>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </div>
       </div>
       <div className="h-screen"></div>
-      <div className="absolute top-0 w-screen h-screen bg-black -z-10 opacity-60"></div>
+      <div className="absolute top-0 w-screen h-screen bg-black -z-10 opacity-25"></div>
       <div className="w-screen h-screen absolute top-0 -z-20">
         <img
           className=" object-cover w-full h-full opacity-95"
