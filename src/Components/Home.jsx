@@ -5,8 +5,9 @@ import { useState, useRef, useEffect } from "react";
 import Calendar from "../assets/Images/calendar.gif";
 import Email from "../assets/Images/email.gif";
 import Ai from "../assets/Images/ai.gif";
-import quoatation_up from "../assets/Images/quotation-Upper.png"
-import quoatation_low from "../assets/Images/quotation-Lower.png"
+import quoatation_up from "../assets/Images/quotation_Upper.png"
+import quoatation_low from "../assets/Images/quotation_Lower.png"
+import Logo from "../assets/Images/TimeLog.png"
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -48,27 +49,21 @@ const Home = () => {
 
   return (
     <div className="h-full">
-      <div className=" h-screen w-full top-0 text p-4 ">
+      <div className=" h-[100svh] w-full top-0 text p-4 ">
         <header>
           <nav className="relative">
-            <div className=" flex items-center gap-2 text-white">
-              <svg
-                className="h-8 w-8 xl:h-10 xl:w-10 text-purple-400 lg:skew-x-[20deg]"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>{" "}
+            <div className=" flex items-center gap-2 text-white text-lg font-bold">
+              <img src={Logo} className="h-8 w-8 "/>
               TimeLog
             </div>
             <div
-              className="text-white absolute rotate-90 right-0 top-0 cursor-pointer "
+              className="text-white absolute rotate-90 right-0 top-0 cursor-pointer text-2xl"
               onClick={() => setIsNav(true)}
             >
               |||
             </div>
             <ul
-              className="text-white fixed left-0  top-0 bg-[rgba(0,0,0,0.73)]  backdrop-blur-lg w-screen  flex items-center justify-center flex-col  gap-3 transition-all"
+              className="text-white fixed left-0  top-0 bg-[rgba(0,0,0,0.73)]  backdrop-blur-lg w-screen  flex items-center justify-center flex-col  gap-3 transition-all z-20"
               ref={NavRef}
             >
               <li
@@ -86,14 +81,14 @@ const Home = () => {
         </header>
 
         <div className="h-full flex flex-col items-center justify-center px-4 gap-16">
-          <div className="text-4xl text-purple-700 backdrop-blur-sm font-bold">
+          <div className="text-4xl text-[#6422ce] backdrop-blur-sm font-bold">
             Automated mail made easy <span className="text-3xl">/</span>
             <span className="text-white">make the time capsule</span>
           </div>
 
-          <div className="text-white">
+          <div className="text-white backdrop-blur-sm p-2 rounded">
             <img src={quoatation_up} className="w-6 h-6 inline mr-1 -mt-3"/>
-          <span className="text-purple-600 font-bold">Unleash</span> the power of smart emails-because your messages should work as hard as you do!
+          <span className="text-[#6422ce] font-bold text-lg">Unleash</span> the power of smart emails-because your messages should work as hard as you do!
           <img src={quoatation_low} className="w-6 h-6 inline ml-1 -mb-2"/>
           </div>
 
@@ -113,7 +108,7 @@ const Home = () => {
               <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
                 <img src={Email} className="h-32 rounded-xl" />
                 <div>
-                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                  <p className="text-[#6422ce] font-bold text-lg backdrop-blur-sm">
                     Mail automation
                   </p>
                   <span className="text-white italic font-normal">
@@ -125,7 +120,7 @@ const Home = () => {
               <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
                 <img src={Ai} className="h-32 rounded-xl" />
                 <div>
-                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                  <p className="text-[#6422ce] font-bold text-lg backdrop-blur-sm">
                     Gen AI
                   </p>
                   <span className="text-white italic font-normal">
@@ -136,7 +131,7 @@ const Home = () => {
               <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
                 <img src={Calendar} className="h-32 rounded-xl" />
                 <div>
-                  <p className="text-purple-600 font-bold text-lg backdrop-blur-sm">
+                  <p className="text-[#6422ce] font-bold text-lg backdrop-blur-sm">
                     Time Capsule
                   </p>
                   <span className="text-white italic font-normal">
@@ -149,9 +144,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen"></div>
-      <div className="absolute top-0 w-screen h-screen bg-black -z-10 opacity-25"></div>
-      <div className="w-screen h-screen absolute top-0 -z-20">
+      <div className="h-[100svh]"></div>
+      <div className="absolute top-0 w-screen h-[100svh] bg-black -z-10 opacity-25"></div>
+      <div className="w-screen h-[100svh] absolute top-0 -z-20">
         <img
           className=" object-cover w-full h-full opacity-95"
           src={projectimg}
