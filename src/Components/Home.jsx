@@ -1,6 +1,7 @@
 import React from "react";
 import projectimg from "../assets/Images/Hero.gif";
 import { useState, useRef, useEffect } from "react";
+import "./customDots.css"
 
 import Calendar from "../assets/Images/calendar.gif";
 import Email from "../assets/Images/email.gif";
@@ -47,6 +48,8 @@ const Home = () => {
     },
   };
 
+  
+
   return (
     <div className="h-full">
       <div className=" h-[100svh] w-full top-0 text p-4 ">
@@ -63,19 +66,19 @@ const Home = () => {
               |||
             </div>
             <ul
-              className="text-white fixed left-0  top-0 bg-[rgba(0,0,0,0.73)]  backdrop-blur-lg w-screen  flex items-center justify-center flex-col  gap-3 transition-all z-20"
+              className="text-gray-400 fixed left-0  top-0 bg-[rgba(0,0,0,0.55)]  backdrop-blur-xl w-screen  flex items-center justify-center flex-col  gap-3 transition-all z-20"
               ref={NavRef}
             >
               <li
-                className="absolute top-0 right-0 px-3 cursor-pointer  "
+                className="absolute top-0 right-0 px-3 cursor-pointer text-white"
                 onClick={() => setIsNav(false)}
                 ref={CloseRef}
               >
                 &times;
               </li>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
+              <li className="hover:text-white">Home</li>
+              <li className="hover:text-white">About Us</li>
+              <li className="hover:text-white">Services</li>
             </ul>
           </nav>
         </header>
@@ -86,14 +89,14 @@ const Home = () => {
             <span className="text-white">make the time capsule</span>
           </div>
 
-          <div className="text-white backdrop-blur-sm p-2 rounded">
+          <div className="text-white backdrop-blur-[5px] p-2 rounded-2xl">
             <img src={quoatation_up} className="w-6 h-6 inline mr-1 -mt-3"/>
           <span className="text-[#6422ce] font-bold text-lg">Unleash</span> the power of smart emails-because your messages should work as hard as you do!
           <img src={quoatation_low} className="w-6 h-6 inline ml-1 -mb-2"/>
           </div>
 
 
-          <div className="w-full ">
+          <div className="w-full relative pb-8  ">
             <Carousel className=""
               responsive={responsive}
               showDots={true}
@@ -103,9 +106,11 @@ const Home = () => {
               autoPlay={true}
               autoPlaySpeed={4500}
               removeArrowOnDeviceType={["tablet", "mobile"]}
-              renderDotsOutside={true}
+              renderDotsOutside
+              renderButtonGroupOutside={false}
+              customDot={<CustomDot />}
             >
-              <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl">
+              <div className=" flex gap-4 border rounded-2xl p-1 backdrop-blur-3xl items-center justify-center">
                 <img src={Email} className="h-32 rounded-xl" />
                 <div>
                   <p className="text-[#6422ce] font-bold text-lg backdrop-blur-sm">
@@ -124,7 +129,7 @@ const Home = () => {
                     Gen AI
                   </p>
                   <span className="text-white italic font-normal">
-                    Automate Your Mails Through Gen AI
+                  Effortlessly enhance or create email content with our AI tool.🚀
                   </span>
                 </div>
               </div>
@@ -156,5 +161,12 @@ const Home = () => {
     </div>
   );
 };
-
+const CustomDot = ({ onClick, ...rest }) => {
+  const { active } = rest;
+  return (
+      <li
+          className={`custom-dot ${active ? 'active' : ''}`}
+          onClick={onClick}/>
+  );
+};
 export default Home;

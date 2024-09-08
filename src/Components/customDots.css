@@ -1,0 +1,14 @@
+.custom-dot {
+    background-color: black;
+    border: 1px solid white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.custom-dot.active {
+    background-color: white;
+}
