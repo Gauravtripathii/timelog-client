@@ -1,14 +1,15 @@
 import React from "react";
 import projectimg from "../assets/Images/Hero.gif";
 import { useState, useRef, useEffect } from "react";
-import "./customDots.css"
+import "./customDots.css";
 
 import Calendar from "../assets/Images/calendar.gif";
 import Email from "../assets/Images/email.gif";
 import Ai from "../assets/Images/ai.gif";
-import quoatation_up from "../assets/Images/quotation_Upper.png"
-import quoatation_low from "../assets/Images/quotation_Lower.png"
-import Logo from "../assets/Images/TimeLog.png"
+import quoatation_up from "../assets/Images/quotation_Upper.png";
+import quoatation_low from "../assets/Images/quotation_Lower.png";
+import Logo from "../assets/Images/TimeLog.png";
+import info_icon from "../assets/Images/info.gif";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -48,16 +49,15 @@ const Home = () => {
     },
   };
 
-  
-
   return (
     <div className="">
       <div className=" h-[100svh] w-full p-4 ">
         {/* HEADER */}
+        <div className="fixed w-full h-16 top-0 z-40 backdrop-blur-lg bg-[rgba(0, 0, 0, 0.5)]"></div>
         <header className="fixed z-50 w-screen left-0 top-0 p-4 h-16">
           <nav className="relative">
             <div className=" flex items-center gap-2 text-white text-lg font-bold">
-              <img src={Logo} className="h-8 w-8 "/>
+              <img src={Logo} className="h-8 w-8 " />
               TimeLog
             </div>
             <div
@@ -84,9 +84,6 @@ const Home = () => {
           </nav>
         </header>
 
-
-
-
         {/* HERO */}
         <div className="h-[100svh] w-[100vw] flex flex-col items-center justify-center px-4 gap-16 fixed top-0 left-0">
           <div className="text-4xl text-[#6422ce] backdrop-blur-sm font-bold">
@@ -95,14 +92,18 @@ const Home = () => {
           </div>
 
           <div className="text-white backdrop-blur-[5px] p-2 rounded-2xl">
-            <img src={quoatation_up} className="w-6 h-6 inline mr-1 -mt-3"/>
-          <span className="text-[#6422ce] font-bold text-lg">Unleash</span> the power of smart emails-because your messages should work as hard as you do!
-          <img src={quoatation_low} className="w-6 h-6 inline ml-1 -mb-2"/>
+            <img src={quoatation_up} className="w-6 h-6 inline mr-1 -mt-3" />
+            <span className="text-[#6422ce] font-bold text-lg">
+              Unleash
+            </span>{" "}
+            the power of smart emails-because your messages should work as hard
+            as you do!
+            <img src={quoatation_low} className="w-6 h-6 inline ml-1 -mb-2" />
           </div>
 
-
           <div className="w-full relative pb-8  ">
-            <Carousel className=""
+            <Carousel
+              className=""
               responsive={responsive}
               showDots={true}
               swipeable={true}
@@ -134,7 +135,8 @@ const Home = () => {
                     Gen AI
                   </p>
                   <span className="text-white italic font-normal">
-                  Effortlessly enhance or create email content with our AI tool.🚀
+                    Effortlessly enhance or create email content with our AI
+                    tool.🚀
                   </span>
                 </div>
               </div>
@@ -155,23 +157,40 @@ const Home = () => {
         </div>
       </div>
 
-
-
-
       {/* 2ND PAGE */}
-      <div className="w-full h-[100svh] bg-[#040400] pt-16 absolute">
+      <div className="w-full h-fit bg-[#040400] pt-16 py-3 absolute">
+        <div className="px-8 flex flex-col gap-6">
+          <div className="intro">
+            {/* <img src={info_icon} alt="" /> */}
+            <div className="title flex items-center text-gray-500 font-semibold gap-5">
+              <div className="text text-7xl">01</div>
+              <div className="w-12 border border-gray-500"></div>
+              <span className="font-normal">MAIL AUTOMATION</span>
+            </div>
+            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+          </div>
 
-        <div className="">
+          <div className="intro">
+            {/* <img src={info_icon} alt="" /> */}
+            <div className="title flex flex-row-reverse items-center text-gray-500 font-semibold gap-5">
+              <div className="text text-7xl">02</div>
+              <div className="w-12 border border-gray-500"></div>
+              <span className="font-normal">GEN AI</span>
+            </div>
+            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+          </div>
 
-            
-
+          <div className="intro">
+            {/* <img src={info_icon} alt="" /> */}
+            <div className="title flex items-center text-gray-500 font-semibold gap-5">
+              <div className="text text-7xl">03</div>
+              <div className="w-12 border border-gray-500"></div>
+              <span className="font-normal">TIME CAPSULE</span>
+            </div>
+            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+          </div>
         </div>
-
       </div>
-
-
-
-
 
       {/* FOR BACKGROUND */}
       <div className="absolute top-0 w-screen h-[100svh] bg-black opacity-25 -z-20"></div>
@@ -188,9 +207,7 @@ const Home = () => {
 const CustomDot = ({ onClick, ...rest }) => {
   const { active } = rest;
   return (
-      <li
-          className={`custom-dot ${active ? 'active' : ''}`}
-          onClick={onClick}/>
+    <li className={`custom-dot ${active ? "active" : ""}`} onClick={onClick} />
   );
 };
 export default Home;
