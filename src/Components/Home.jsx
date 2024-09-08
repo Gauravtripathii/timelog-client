@@ -51,9 +51,10 @@ const Home = () => {
   
 
   return (
-    <div className="h-full">
-      <div className=" h-[100svh] w-full top-0 text p-4 ">
-        <header>
+    <div className="">
+      <div className=" h-[100svh] w-full p-4 ">
+        {/* HEADER */}
+        <header className="fixed z-50 w-screen left-0 top-0 p-4 h-16">
           <nav className="relative">
             <div className=" flex items-center gap-2 text-white text-lg font-bold">
               <img src={Logo} className="h-8 w-8 "/>
@@ -83,9 +84,13 @@ const Home = () => {
           </nav>
         </header>
 
-        <div className="h-full flex flex-col items-center justify-center px-4 gap-16">
+
+
+
+        {/* HERO */}
+        <div className="h-[100svh] w-[100vw] flex flex-col items-center justify-center px-4 gap-16 fixed top-0 left-0">
           <div className="text-4xl text-[#6422ce] backdrop-blur-sm font-bold">
-            Automated mail made easy <span className="text-3xl">/</span>
+            Automated mail made easy <span className="text-3xl">/ </span>
             <span className="text-white">make the time capsule</span>
           </div>
 
@@ -114,7 +119,7 @@ const Home = () => {
                 <img src={Email} className="h-32 rounded-xl" />
                 <div>
                   <p className="text-[#6422ce] font-bold text-lg backdrop-blur-sm">
-                    Mail automation
+                    Mail Automation
                   </p>
                   <span className="text-white italic font-normal">
                     Our email automation is like a personal assistant who never
@@ -149,9 +154,28 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="h-[100svh]"></div>
-      <div className="absolute top-0 w-screen h-[100svh] bg-black -z-10 opacity-25"></div>
-      <div className="w-screen h-[100svh] absolute top-0 -z-20">
+
+
+
+
+      {/* 2ND PAGE */}
+      <div className="w-full h-[100svh] bg-[#040400] pt-16 absolute">
+
+        <div className="">
+
+            
+
+        </div>
+
+      </div>
+
+
+
+
+
+      {/* FOR BACKGROUND */}
+      <div className="absolute top-0 w-screen h-[100svh] bg-black opacity-25 -z-20"></div>
+      <div className="w-screen h-[100svh] fixed top-0 -z-30">
         <img
           className=" object-cover w-full h-full opacity-95"
           src={projectimg}
