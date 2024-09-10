@@ -157,7 +157,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* 2ND PAGE */}
       <div className="w-full h-fit bg-[#040400] pt-16 py-3 absolute">
         <div className="px-8 flex flex-col gap-6">
@@ -168,7 +167,16 @@ const Home = () => {
               <div className="w-12 border border-gray-500"></div>
               <span className="font-normal">MAIL AUTOMATION</span>
             </div>
-            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+            <div className="content text-white text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium soluta obcaecati saepe omnis consequuntur totam
+              molestias quas recusandae illum provident.
+            </div>
+            <div className="content text-white text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium soluta obcaecati saepe omnis consequuntur totam
+              molestias quas recusandae illum provident.
+            </div>
           </div>
 
           <div className="intro">
@@ -178,7 +186,16 @@ const Home = () => {
               <div className="w-12 border border-gray-500"></div>
               <span className="font-normal">GEN AI</span>
             </div>
-            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+            <div className="content text-white text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium soluta obcaecati saepe omnis consequuntur totam
+              molestias quas recusandae illum provident.
+            </div>
+            <div className="content text-white text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium soluta obcaecati saepe omnis consequuntur totam
+              molestias quas recusandae illum provident.
+            </div>
           </div>
 
           <div className="intro">
@@ -188,11 +205,38 @@ const Home = () => {
               <div className="w-12 border border-gray-500"></div>
               <span className="font-normal">TIME CAPSULE</span>
             </div>
-            <div className="content text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium soluta obcaecati saepe omnis consequuntur totam molestias quas recusandae illum provident.</div>
+            <div className="content text-white text-justify pb-20">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium soluta obcaecati saepe omnis consequuntur totam
+              molestias quas recusandae illum provident.
+            </div>
           </div>
         </div>
-      </div>
 
+        {/* FOOTER */}
+
+        <div className="border w-full border-gray-700 "></div>
+
+        <footer>
+          <div className="h-[15vh] w-full p-2 flex  justify-between bg">
+            <span className="flex gap-2 py-6">
+              <img src={Logo} className="h-7 w-7" />
+              <span className="text-white font-semibold text-lg">TimeLog</span>
+            </span>
+            <span className="text-gray-500 px-6">
+              <ul>
+                <li className="hover:text-white">About us</li>
+                <li className="hover:text-white">Services</li>
+                <li className="hover:text-white">Products</li>
+              </ul>
+            </span>
+          </div>
+          <span className="text-gray-500 flex items-center justify-center pb-1 flex-col">
+            <span className="pb-1">Made@TimeLog</span>
+            Copyright©All rights reserved
+          </span>
+        </footer>
+      </div>
       {/* FOR BACKGROUND */}
       <div className="absolute top-0 w-screen h-[100svh] bg-black opacity-25 -z-20"></div>
       <div className="w-screen h-[100svh] fixed top-0 -z-30">
@@ -202,6 +246,7 @@ const Home = () => {
           alt="image description"
         />
       </div>
+      <div className="h-[50vh] border bg-[#6422ce] w-full pt-16"></div>
     </div>
   );
 };
