@@ -160,52 +160,52 @@ const Home = () => {
       {/* 2ND PAGE */}
       <div className="w-full h-fit bg-[#040400] pt-16 py-3 absolute">
         <div className="px-8 flex flex-col gap-6">
-          <div className="intro">
+          <div className="intro sm:flex gap-4 flex-col">
             {/* <img src={info_icon} alt="" /> */}
             <div className="title flex items-center text-gray-500 font-semibold gap-5">
-              <div className="text text-7xl">01</div>
+              <div className="text text-7xl sm:text-8xl">01</div>
               <div className="w-12 border border-gray-500"></div>
-              <span className="font-normal">MAIL AUTOMATION</span>
+              <span className="font-normal sm:text-2xl">MAIL AUTOMATION</span>
             </div>
-            <div className="content text-white text-justify">
+            <div className="content text-white text-justify sm:text-xl ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium soluta obcaecati saepe omnis consequuntur totam
               molestias quas recusandae illum provident.
             </div>
-            <div className="content text-white text-justify">
+            <div className="content text-white text-justify sm:text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium soluta obcaecati saepe omnis consequuntur totam
               molestias quas recusandae illum provident.
             </div>
           </div>
 
-          <div className="intro">
+          <div className="intro sm:flex gap-4 flex-col">
             {/* <img src={info_icon} alt="" /> */}
             <div className="title flex flex-row-reverse items-center text-gray-500 font-semibold gap-5">
-              <div className="text text-7xl">02</div>
+              <div className="text text-7xl sm:text-8xl">02</div>
               <div className="w-12 border border-gray-500"></div>
-              <span className="font-normal">GEN AI</span>
+              <span className="font-normal sm:text-2xl">GEN AI</span>
             </div>
-            <div className="content text-white text-justify">
+            <div className="content text-white text-justify sm:text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium soluta obcaecati saepe omnis consequuntur totam
               molestias quas recusandae illum provident.
             </div>
-            <div className="content text-white text-justify">
+            <div className="content text-white text-justify sm:text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium soluta obcaecati saepe omnis consequuntur totam
               molestias quas recusandae illum provident.
             </div>
           </div>
 
-          <div className="intro">
+          <div className="intro sm:flex gap-4 flex-col">
             {/* <img src={info_icon} alt="" /> */}
             <div className="title flex items-center text-gray-500 font-semibold gap-5">
-              <div className="text text-7xl">03</div>
+              <div className="text text-7xl sm:text-8xl">03</div>
               <div className="w-12 border border-gray-500"></div>
-              <span className="font-normal">TIME CAPSULE</span>
+              <span className="font-normal sm:text-2xl">TIME CAPSULE</span>
             </div>
-            <div className="content text-white text-justify pb-20">
+            <div className="content text-white text-justify pb-20 sm:text-xl sm:pb-14">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium soluta obcaecati saepe omnis consequuntur totam
               molestias quas recusandae illum provident.
@@ -219,11 +219,11 @@ const Home = () => {
 
         <footer>
           <div className="h-[15vh] w-full p-2 flex  justify-between bg">
-            <span className="flex gap-2 py-6">
-              <img src={Logo} className="h-7 w-7" />
-              <span className="text-white font-semibold text-lg">TimeLog</span>
+            <span className="flex gap-2 py-6 sm:px-4">
+              <img src={Logo} className="h-7 w-7 sm:h-9 sm:w-9" />
+              <span className="text-white font-semibold text-lg sm:text-xl">TimeLog</span>
             </span>
-            <span className="text-gray-500 px-6">
+            <span className="text-gray-500 px-6 sm:text-xl sm:pt-3">
               <ul>
                 <li className="hover:text-white">About us</li>
                 <li className="hover:text-white">Services</li>
@@ -231,7 +231,7 @@ const Home = () => {
               </ul>
             </span>
           </div>
-          <span className="text-gray-500 flex items-center justify-center pb-1 flex-col">
+          <span className="text-gray-500 flex items-center justify-center pb-1 flex-col sm:text-lg">
             <span className="pb-1">Made@TimeLog</span>
             Copyright©All rights reserved
           </span>
