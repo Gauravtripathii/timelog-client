@@ -3,14 +3,27 @@ import Registeration from './Components/registeration'
 import TestHome from './Components/TestHome';
 import Home from './Components/Home';
 import Profile from './Components/Profile';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 const App = () => {
   return (
-    <div className='overflow-x-hidden'>
-      {/* <Registeration /> */}
-      {/* <TestHome /> */}
-      {/* <Home /> */}
-      <Profile />
-    </div>
+    <BrowserRouter>
+      <div className='overflow-x-hidden'>
+        {/* <Registeration /> */}
+        {/* <TestHome /> */}
+        
+        <Routes>
+
+          <Route path='/' element={<Home />} />
+          <Route path='/profile' element={<Profile />} />
+
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

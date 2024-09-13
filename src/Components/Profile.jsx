@@ -10,6 +10,8 @@ import { FiEdit } from "react-icons/fi";
 
 import { useState, useRef, useEffect } from "react";
 
+import { NavLink } from "react-router-dom";
+
 const Profile = () => {
     const [profile, setProfile] = useState({
         name: "",
@@ -63,7 +65,9 @@ const Profile = () => {
               >
                 &times;
               </li>
-              <li className="hover:text-white ">Home</li>
+              <li className="hover:text-white ">
+                <NavLink to="/">Home</NavLink>
+              </li>
               <li className="hover:text-white">About Us</li>
               <li className="hover:text-white">Services</li>
             </ul>
