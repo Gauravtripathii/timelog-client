@@ -42,7 +42,7 @@ const Profile = () => {
     }
   }, [isNav]);
     return (
-        <div className="h-[100svh] relative">
+        <div className="h-[100vh] relative">
             <nav className="absolute top-0 z-10 w-full p-3">
             <div className=" flex items-center gap-2 text-white text-lg sm:text-xl md:text-3xl font-bold md:pl-6">
               <img src={Logo} className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
