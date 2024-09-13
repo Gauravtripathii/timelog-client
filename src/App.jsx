@@ -16,12 +16,13 @@ const App = () => {
         {/* <Registeration /> */}
         {/* <TestHome /> */}
         
-        <Routes>
+        {/* <Routes>
 
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
 
-        </Routes>
+        </Routes> */}
+        <Profile />
       </div>
     </BrowserRouter>
   );
