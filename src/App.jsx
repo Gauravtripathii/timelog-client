@@ -2,15 +2,29 @@ import React from 'react'
 import Registeration from './Components/registeration' 
 import TestHome from './Components/TestHome';
 import Home from './Components/Home';
-import Testabout from './Components/testabout';
+import Profile from './Components/Profile';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 const App = () => {
   return (
-    <div className='overflow-x-hidden'>
-      {/* <Registeration /> */}
-      {/* <TestHome /> */}
-      {/* <Home /> */}
-      <Testabout/>
-    </div>
+    <BrowserRouter>
+      <div className='overflow-x-hidden'>
+        {/* <Registeration /> */}
+        {/* <TestHome /> */}
+        
+        {/* <Routes>
+
+          <Route path='/' element={<Home />} />
+          <Route path='/profile' element={<Profile />} />
+
+        </Routes> */}
+        <Profile />
+      </div>
+    </BrowserRouter>
   );
 }
 

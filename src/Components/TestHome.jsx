@@ -227,7 +227,7 @@ const HomePage = () => {
               details: "With mail automation, your emails are handled effortlessly. Schedule, customize, and send professional emails without lifting a finger. Perfect for project managers and busy professionals." 
             },
             { 
-              title: "GEN AI", 
+              title: "AI ASSISTANT", 
               description: "Let our AI generate personalized responses, reports, and tasks based on your time logs.", 
               details: "AI not only saves you time but also provides intelligent suggestions, generates content, and handles repetitive tasks. Whether you're tracking personal or professional tasks, Gen AI adapts to your needs." 
             },
@@ -237,17 +237,17 @@ const HomePage = () => {
               details: "With the Time Capsule feature, easily access your past activities, analyze productivity trends, and learn from your time usage history. You’ll have all your logs securely stored and available whenever you need them." 
             }
           ].map((feature, index) => (
-            <div key={index} className="intro sm:flex items-start gap-8 bg-[#2a2a2a p-6 rounded-lg shadow-xl shadow- ">
-              <div className="flex items-center text-gray-500 font-semibold gap-4 sm:gap-5">
+            <div key={index} className="intro sm:flex items-start gap-8  p-6 rounded-lg shadow-xl ">
+              <div className="flex items-center text-gray-500 font-semibold gap-4 sm:gap-5 w-[25%]">
                 <div className="text-6xl sm:text-7xl font-bold text-blue ">{index + 1}</div>
-                <h3 className="text-2xl font-bold text-gray-200">{feature.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-200 ">{feature.title}</h3>
               </div>
 
-              <div className="flex-1 text-gray-300">
-                <p className="mb-4">{feature.description}</p>
+              <div className="flex-1 text-gray-300  pt-4">
+                <p className="pb-4">{feature.description}</p>
                 {/* View More Toggle */}
                 {expanded[index] ? (
-                  <div className="mt-4">
+                  <div className="mt-4 ">
                     <p className="text-gray-400">{feature.details}</p>
                     <button
                       onClick={() => handleToggle(index)}
@@ -278,7 +278,7 @@ const HomePage = () => {
           TimeLog
         </span>
         <span className="text-gray-500">
-          <ul className="flex space-x-6">
+          <ul className="flex flex-col ">
             <li className="hover:text-white cursor-pointer">About us</li>
             <li className="hover:text-white cursor-pointer">Services</li>
             <li className="hover:text-white cursor-pointer">Products</li>

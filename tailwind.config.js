@@ -10,6 +10,9 @@ export default {
         archivo: ['"Archivo Black"', 'sans-serif'],
         poppins: ['"Poppins"', 'sans-serif'],
       },
+      boxShadow: {
+        "3xl": "0 0 50px black"
+      }
     },
   },
   plugins: [],
