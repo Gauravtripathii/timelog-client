@@ -11,6 +11,8 @@ import quoatation_low from "../assets/Images/quotation_Lower.png";
 import Logo from "../assets/Images/TimeLog.png";
 import info_icon from "../assets/Images/info.gif";
 
+import clock_img from "../assets/Images/clock.png";
+
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
 // import { SocialIcon } from "react-social-icons";
@@ -18,6 +20,82 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Home = () => {
+  const containerRef = useRef(null);
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+
+    // Canvas for particle effects
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const particleCount = 50;
+    const clockImage = new Image();
+    clockImage.src = clock_img;
+
+    class Particle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 20 + 5;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.rotation = Math.random() * Math.PI * 2;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.rotation += 0.05;
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.drawImage(clockImage, -this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        particles.push(new Particle(x, y));
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((particle) => {
+        particle.update();
+        particle.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    function resizeCanvas() {
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+      initParticles();
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    animateParticles();
+
+    // Scroll-triggered parallax and fade-in effect for intro sections
+
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
   const [isNav, setIsNav] = useState(false);
   const NavRef = useRef();
   const CloseRef = useRef();
@@ -88,26 +166,42 @@ const Home = () => {
         </header>
 
         {/* HERO */}
-        <div className="h-[100svh] w-[100vw] flex flex-col items-center justify-center px-4 gap-16 fixed top-0 left-0 sm:px-1 sm:gap-28">
-          <div className="text-4xl text-[#6627F9] backdrop-blur-sm font-bold sm:text-5xl sm:px-2 md:text-6xl md:mx-6">
+        <div className=" h-[100svh] w-[100vw] flex flex-col items-center justify-center px-4 fixed top-0 left-0 sm:px-1 sm:gap-28">
+          {/* <div className="text-4xl text-[#6627F9] backdrop-blur-sm font-bold sm:text-5xl sm:px-2 md:text-6xl md:mx-6">
             Automated mail made easy <span className="text-3xl md:text-6xl">/ </span>
             <span className="text-white">make the time capsule</span>
-          </div>
+          </div> */}
+          <h1 className="text-4xl font-extrabold sm:text-5xl sm:px-2 md:text-6xl md:mx-6 sm:flex flex-col items-center">
+            <span className="text-orange-400">Automated </span>
+            <span className="block text-gray-100">mail made easy</span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              Make the time capsule
+            </span>
+          </h1>
 
           <div className="text-white px-2 rounded-2xl sm:text-2xl md:text-3xl sm:px-10 backdrop-blur-[5px] border-red-500 p-4 shadow-purple-500 md:mx-6">
             <img
               src={quoatation_up}
               className="w-6 h-6 inline mr-1 -mt-3 sm:w-8 sm:h-8 sm:-mt-5"
             />
-            <span className="text-[#6627F9] font-bold text-lg sm:text-3xl md:text-4xl">
-              Unleash
+            <span className="text-orange-400 font-bold text-lg sm:text-3xl md:text-4xl">
+              Track time,
             </span>{" "}
-            the power of smart emails-because your messages should work as hard
-            as you do!
+            boost productivity, and let AI handle your communications. Welcome to the future of time management.
             <img
               src={quoatation_low}
               className="w-6 h-6 inline ml-1 -mb-2 sm:-mb-3 sm:w-8 sm:h-8 "
             />
+          </div>
+
+          <div className="flex gap-2 items-center justify-center text-xl pb-4 font-sans w-full">
+            <span className="border-2 hover:bg-black border-purple-600 rounded-xl bg-purple-600 py-2 px-4 w-1/2 text-center uppercase text-purple-600 text-white hover:text-purple-600">
+              Register
+            </span>
+            <span className="border-2 bg-black border-purple-600 rounded-xl hover:!bg-purple-600  py-2 px-4 w-1/2 text-center uppercase text-purple-600 hover:text-white">
+              Login
+            </span>
+
           </div>
 
           {/* Bootstrap Carousel */}
@@ -285,14 +379,16 @@ const Home = () => {
         </footer>
       </div>
       {/* FOR BACKGROUND */}
-      <div className="absolute top-0 w-screen h-[100svh] bg-black opacity-25 -z-20"></div>
-      <div className="w-screen h-[100svh] fixed top-0 -z-30">
+      <div className="fixed top-0 w-screen h-[100svh] bg-black -z-20" ref={containerRef}>
+        <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0"></canvas>
+      </div>
+      {/* <div className="w-screen h-[100svh] fixed top-0 -z-30">
         <img
           className=" object-cover w-full h-full opacity-95"
           src={projectimg}
           alt="image description"
         />
-      </div>
+      </div> */}
       {/* <div className="h-[50vh] border bg-[#6422ce] w-full pt-16"></div> */}
     </div>
   );
