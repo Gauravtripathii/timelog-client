@@ -253,8 +253,6 @@ const Home = () => {
 
         {/* FOOTER */}
 
-        {/* <div className="border w-full border-red-500"></div> */}
-
         <span className="text-gray-500">
           <hr />
         </span>
@@ -289,7 +287,7 @@ const Home = () => {
           alt="image description"
         />
       </div>
-      <div className="h-[50vh] border bg-[#6422ce] w-full pt-16"></div>
+      {/* <div className="h-[50vh] border bg-[#6422ce] w-full pt-16"></div> */}
     </div>
   );
 };

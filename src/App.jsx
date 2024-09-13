@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className='overflow-x-hidden'>
       {/* <Registeration /> */}
-      {/* <TestHome /> */}
-      <Home />
+      <TestHome />
+      {/* <Home /> */}
     </div>
   );
 }
