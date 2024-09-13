@@ -166,20 +166,20 @@ const Home = () => {
         </header>
 
         {/* HERO */}
-        <div className=" h-[100svh] w-[100vw] flex flex-col items-center justify-center px-4 fixed top-0 left-0 sm:px-1 sm:gap-28">
+        <div className=" h-[100svh] w-[100vw] flex flex-col items-center justify-center gap-[5vh] px-4 fixed top-0 left-0 sm:px-1 sm:gap-28">
           {/* <div className="text-4xl text-[#6627F9] backdrop-blur-sm font-bold sm:text-5xl sm:px-2 md:text-6xl md:mx-6">
             Automated mail made easy <span className="text-3xl md:text-6xl">/ </span>
             <span className="text-white">make the time capsule</span>
           </div> */}
-          <h1 className="text-4xl font-extrabold sm:text-5xl sm:px-2 md:text-6xl md:mx-6 sm:flex flex-col items-center">
+          <h1 className="text-4xl font-extrabold sm:text-5xl sm:px-2 md:text-6xl md:mx-6 flex flex-col items-center">
             <span className="text-orange-400">Automated </span>
             <span className="block text-gray-100">mail made easy</span>
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center">
               Make the time capsule
             </span>
           </h1>
 
-          <div className="text-white px-2 rounded-2xl sm:text-2xl md:text-3xl sm:px-10 backdrop-blur-[5px] border-red-500 p-4 shadow-purple-500 md:mx-6">
+          <div className="text-white px-2 rounded-2xl sm:text-2xl md:text-3xl sm:px-10 border-red-500 shadow-purple-500 md:mx-6">
             <img
               src={quoatation_up}
               className="w-6 h-6 inline mr-1 -mt-3 sm:w-8 sm:h-8 sm:-mt-5"
@@ -194,7 +194,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="flex gap-2 items-center justify-center text-xl pb-4 font-sans w-full">
+          <div className="flex gap-2 items-center justify-center text-xl font-sans w-full">
             <span className="border-2 hover:bg-black border-purple-600 rounded-xl bg-purple-600 py-2 px-4 w-1/2 text-center uppercase text-purple-600 text-white hover:text-purple-600">
               Register
             </span>
