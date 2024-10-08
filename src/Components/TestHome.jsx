@@ -186,7 +186,7 @@ const HomePage = () => {
       </nav>
 
       <div ref={titleRef} className="text-center z-10 relative h-screen pt-16">
-        <h1 className="text-[5.5rem] font-extrabold pb-6 ">
+        <h1 className="text-[4.5rem] font-extrabold pb-6 ">
           <span className="text-orange-400">Automated </span>
           <span className="block text-gray-100">mail made easy</span>
           <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
