@@ -169,7 +169,7 @@ const HomePage = () => {
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0"></canvas>
 
       <nav ref={navRef} className="flex justify-between items-center pb-12 z-10 relative p-8">
-        <div className="flex items-center gap-2 text-white text-lg sm:text-xl font-bold">
+        <div className="flex items-center gap-2 text-white text-lg sm:text-xl font-bold " >
           <img src={Logo} className="h-8 w-8 sm:h-10 sm:w-10" alt="TimeLog Logo" />
           TimeLog
         </div>
@@ -186,7 +186,7 @@ const HomePage = () => {
       </nav>
 
       <div ref={titleRef} className="text-center z-10 relative h-screen pt-16">
-        <h1 className="text-7xl font-extrabold pb-6 ">
+        <h1 className="text-[5.5rem] font-extrabold pb-6 ">
           <span className="text-orange-400">Automated </span>
           <span className="block text-gray-100">mail made easy</span>
           <span className="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">

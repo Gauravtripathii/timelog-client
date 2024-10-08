@@ -8,7 +8,7 @@ const AuthPage = () => {
 
   return (
     <div className="flex h-screen bg-gray-100"> 
-      <div className="bg-white shadow-lg overflow-hidden flex flex-col h-screen w-screen relative lg:flex-row">
+      <div className="bg- shadow-lg overflow-hidden flex flex-col h-screen w-screen relative lg:flex-row">
         <div className="w-full h-1/2 bg-[#22243d] text-white -skew-y-[15deg] -translate-y-[40%] shadow-xl lg:w-1/2 xl:w-[65%] lg:h-full lg:skew-y-[0] lg:translate-y-[0%] lg:-skew-x-[20deg] lg:-translate-x-[22%]">
           <div className="flex flex-col items-center justify-between gap-7 h-[60%] w-full absolute top-[25%] pt-20 skew-y-[15deg] lg:w-1/2 lg:skew-y-[0] lg:translate-x-[30%] lg:top-0">
             <div className="flex items-center gap-2 md:pt-12 lg:-translate-x-6">

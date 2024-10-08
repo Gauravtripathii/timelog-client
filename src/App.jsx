@@ -3,6 +3,7 @@ import Registeration from './Components/registeration'
 import TestHome from './Components/TestHome';
 import Home from './Components/Home';
 import Profile from './Components/Profile';
+import About from './Components/Testabout'
 
 import {
   BrowserRouter,
@@ -14,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <div className='overflow-x-hidden'>
         {/* <Registeration /> */}
-        {/* <TestHome /> */}
+        <TestHome />
         
         {/* <Routes>
 
@@ -22,7 +23,8 @@ const App = () => {
           <Route path='/profile' element={<Profile />} />
 
         </Routes> */}
-        <Profile />
+        {/* <Profile /> */}
+        {/* <About /> */}
       </div>
     </BrowserRouter>
   );
