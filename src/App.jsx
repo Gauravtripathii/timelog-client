@@ -15,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <div className='overflow-x-hidden'>
         {/* <Registeration /> */}
-        <TestHome />
+        {/* <TestHome /> */}
         
         {/* <Routes>
 
@@ -24,7 +24,7 @@ const App = () => {
 
         </Routes> */}
         {/* <Profile /> */}
-        {/* <About /> */}
+        <About />
       </div>
     </BrowserRouter>
   );
