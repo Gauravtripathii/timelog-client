@@ -5,6 +5,7 @@ import TestHome from './Components/TestHome';
 import Home from './Components/Home';
 import Profile from './Components/Profile';
 import About from './Components/Testabout';
+import TestHome2 from './Components/TestHome2';
 
 const ResponsiveHome = () => {
   return (
@@ -17,6 +18,7 @@ const ResponsiveHome = () => {
       {/* Laptop View (hidden by default, show on laptop and above) */}
       <div className="hidden lg:block">
         <TestHome />
+        {/* <TestHome2 /> */}
       </div>
     </div>
   );
